@@ -23,9 +23,4 @@ declare module "next-auth" {
     provider: string;
     accessToken?: string;
   }
-
-  
-
 }
-
-

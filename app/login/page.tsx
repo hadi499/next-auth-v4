@@ -17,15 +17,13 @@ export default function Login() {
     const result = await signIn("credentials", {
       username,
       password,
-      redirect: false, // Handle redirect manually
+      callbackUrl: "/",
     });
 
     if (result?.error) {
       setError("Username atau password salah");
-    } else {
-      router.push("/"); // Redirect ke home
-      router.refresh()
     }
+    // router.push("/"); // Redirect ke home
   };
 
   return (
